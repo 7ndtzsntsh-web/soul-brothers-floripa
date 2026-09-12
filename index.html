@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Soul Brothers | O Primeiro Burger Artesanal da Ilha</title>
+  <meta name="description" content="Soul Brothers Hamburgueria em Florianópolis. O primeiro burger artesanal da Ilha, assado na brasa desde 2013 no Santa Mônica. Almoço e noite. Peça já!">
+  <link rel="canonical" href="https://soulbrothersfloripa.vercel.app/">
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:url" content="https://soulbrothersfloripa.vercel.app/">
+  <meta property="og:title" content="Soul Brothers | O Primeiro Burger Artesanal da Ilha">
+  <meta property="og:description" content="Soul Brothers Hamburgueria em Florianópolis. O primeiro burger artesanal da Ilha, assado na brasa desde 2013 no Santa Mônica. Almoço e noite. Peça já!">
+  <meta property="og:image" content="https://soulbrothersfloripa.vercel.app/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://soulbrothersfloripa.vercel.app/">
+  <meta name="twitter:title" content="Soul Brothers | O Primeiro Burger Artesanal da Ilha">
+  <meta name="twitter:description" content="Soul Brothers Hamburgueria em Florianópolis. O primeiro burger artesanal da Ilha, assado na brasa desde 2013 no Santa Mônica. Almoço e noite. Peça já!">
+  <meta name="twitter:image" content="https://soulbrothersfloripa.vercel.app/og-image.jpg">
+
+  <!-- Google Fonts: Bebas Neue & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org FastFoodRestaurant / LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FastFoodRestaurant",
+    "name": "Soul Brothers Hamburgueria",
+    "alternateName": "Soul Brothers Floripa",
+    "image": "https://soulbrothersfloripa.vercel.app/og-image.jpg",
+    "logo": "https://soulbrothersfloripa.vercel.app/logo.png",
+    "@id": "https://soulbrothersfloripa.vercel.app/#restaurant",
+    "url": "https://soulbrothersfloripa.vercel.app/",
+    "telephone": "+5548991208940",
+    "servesCuisine": ["Burgers", "Hamburgueria Artesanal", "Grelhados na Brasa", "Pratos Executivos"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Madre Benvenuta, 1477",
+      "addressLocality": "Florianópolis",
+      "addressRegion": "SC",
+      "postalCode": "88035-001",
+      "addressCountry": "BR",
+      "neighborhood": "Santa Mônica"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -27.5925,
+      "longitude": -48.5136
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:30",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "17:30",
+        "closes": "23:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/soulbrothersfloripa/"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-[#FFF8F0] text-[#1A1A1A] antialiased selection:bg-[#FF7A00] selection:text-white">
+
+  <!-- Top Announcement Bar (Fast-Casual Moodboard Style) -->
+  <div class="bg-[#111111] text-white text-xs py-2 px-4 tracking-widest text-center uppercase font-bold">
+    <div class="max-w-7xl mx-auto flex items-center justify-center space-x-3 sm:space-x-6 overflow-hidden text-[11px] sm:text-xs">
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#FF7A00] animate-pulse"></span> DESDE 2013</span>
+      <span class="text-white/30">•</span>
+      <span class="text-[#FF7A00]">O PRIMEIRO BURGER ARTESANAL DA ILHA</span>
+      <span class="text-white/30 hidden md:inline">•</span>
+      <span class="hidden md:inline">ASSADO 100% NA BRASA 🔥</span>
+      <span class="text-white/30 hidden lg:inline">•</span>
+      <span class="hidden lg:inline text-zinc-400">SANTA MÔNICA • FLORIPA</span>
+    </div>
+  </div>
+
+  <!-- Header / Navigation (Clean Fast-Casual Burger Bar) -->
+  <header class="sticky top-0 z-50 bg-[#FFF8F0]/95 backdrop-blur-md border-b border-black/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo Oficial com Badge Redondo -->
+      <a href="#inicio" class="flex items-center gap-3.5 group">
+        <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#111111] bg-black shadow-md group-hover:scale-105 transition-transform duration-300">
+          <img src="logo.png" alt="Logo Oficial Soul Brothers Hamburgueria" class="w-full h-full object-contain p-0.5">
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-2xl font-bold text-[#111111] tracking-wide leading-none group-hover:text-[#FF7A00] transition-colors">SOUL BROTHERS</span>
+          <span class="text-[10px] tracking-[0.2em] text-zinc-500 font-bold uppercase mt-0.5">HAMBURGUERIA • FLORIPA</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-7 text-xs uppercase tracking-widest font-bold text-zinc-700">
+        <a href="#inicio" class="hover:text-[#FF7A00] transition-colors py-1">Início</a>
+        <a href="#cardapio" class="hover:text-[#FF7A00] transition-colors py-1">Cardápio</a>
+        <a href="#combos" class="hover:text-[#FF7A00] transition-colors py-1">Combos</a>
+        <a href="#almoco" class="hover:text-[#FF7A00] transition-colors py-1">Almoço Executivo</a>
+        <a href="#historia" class="hover:text-[#FF7A00] transition-colors py-1">A Brasa</a>
+        <a href="#localizacao" class="hover:text-[#FF7A00] transition-colors py-1">Localização</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-flame px-5 py-2.5 text-xs uppercase tracking-wider font-bold flex items-center gap-2">
+          <span>Pedir no WhatsApp</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-menu-btn" type="button" aria-label="Abrir Menu de Navegação" class="md:hidden p-2 text-zinc-800 hover:text-[#FF7A00] focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-drawer" class="fixed inset-y-0 right-0 max-w-xs w-full bg-[#111111] text-white border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="Soul Brothers Logo" class="w-10 h-10 rounded-full border border-white/20">
+          <span class="font-display text-xl font-bold tracking-wider text-white">SOUL BROTHERS</span>
+        </div>
+        <button id="mobile-menu-close-btn" type="button" aria-label="Fechar Menu" class="p-2 text-zinc-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="mt-8 flex flex-col space-y-5 text-sm uppercase tracking-widest font-bold text-zinc-300">
+        <a href="#inicio" class="mobile-nav-link hover:text-[#FF7A00] py-1">Início</a>
+        <a href="#cardapio" class="mobile-nav-link hover:text-[#FF7A00] py-1">Cardápio</a>
+        <a href="#combos" class="mobile-nav-link hover:text-[#FF7A00] py-1">Combos Especiais</a>
+        <a href="#almoco" class="mobile-nav-link hover:text-[#FF7A00] py-1">Almoço Executivo</a>
+        <a href="#historia" class="mobile-nav-link hover:text-[#FF7A00] py-1">A Tradição da Brasa</a>
+        <a href="#localizacao" class="mobile-nav-link hover:text-[#FF7A00] py-1">Localização &amp; Horários</a>
+        <a href="#faq" class="mobile-nav-link hover:text-[#FF7A00] py-1">Dúvidas Frequentes</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-white/10 space-y-4">
+      <div class="text-xs text-zinc-400 flex flex-col gap-1">
+        <span class="text-white font-bold">Soul Brothers Hamburgueria</span>
+        <span>Av. Madre Benvenuta, 1477 • Santa Mônica</span>
+        <span class="text-[#FF7A00] font-bold">Almoço &amp; Noite</span>
+      </div>
+      <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="w-full btn-flame py-3 text-xs uppercase tracking-widest font-bold flex items-center justify-center gap-2">
+        <span>Fazer Pedido Agora</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (Fast-Casual Burger Concept - Exact Moodboard Reference) -->
+    <section id="inicio" class="relative pt-10 pb-16 lg:pt-16 lg:pb-24 bg-[#FFF8F0] border-b border-black/5 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          <!-- Coluna Esquerda: Tipografia Marcante & Apelo Gourmet -->
+          <div class="lg:col-span-6 flex flex-col justify-center reveal-on-scroll">
+            
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FF7A00]/10 border border-[#FF7A00]/30 rounded-full text-xs font-bold tracking-widest text-[#D84315] uppercase mb-6 w-fit">
+              <span class="w-2 h-2 rounded-full bg-[#FF7A00] animate-ping"></span>
+              PIONEIROS EM FLORIPA • DESDE 2013
+            </div>
+
+            <!-- Single Unique H1 (AGENTS.md Requirement) -->
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-[#111111] tracking-tight leading-[0.95] mb-6 uppercase">
+              ASSADO NA BRASA.<br>
+              <span class="text-[#FF7A00]">FEITO MELHOR.</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-zinc-700 font-medium leading-relaxed mb-8 max-w-xl">
+              O primeiro burger artesanal de Florianópolis. Carne 100% bovina fresca selecionada, grelhada no fogo a carvão, queijo derretido no ponto perfeito e pão artesanal fresquinho todos os dias no Santa Mônica.
+            </p>
+
+            <!-- Botões de Ação Principais -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+              <a href="#cardapio" class="btn-flame px-8 py-4 text-sm uppercase tracking-widest text-center font-bold">
+                Ver Cardápio
+              </a>
+              <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20o%20delivery%20da%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-dark px-8 py-4 text-sm uppercase tracking-widest text-center font-bold">
+                Pedir no Delivery
+              </a>
+            </div>
+
+            <!-- Selos Rápidos de Destaque -->
+            <div class="pt-8 border-t border-black/10 grid grid-cols-3 gap-4 text-zinc-700">
+              <div>
+                <div class="text-2xl font-display font-bold text-[#111111]">100% BRASA</div>
+                <div class="text-[11px] uppercase tracking-wider text-zinc-500 font-bold mt-0.5">Sabor Defumado Real</div>
+              </div>
+              <div>
+                <div class="text-2xl font-display font-bold text-[#111111]">11+ ANOS</div>
+                <div class="text-[11px] uppercase tracking-wider text-zinc-500 font-bold mt-0.5">Tradição na Ilha</div>
+              </div>
+              <div>
+                <div class="text-2xl font-display font-bold text-[#111111]">ALMOÇO &amp; NOITE</div>
+                <div class="text-[11px] uppercase tracking-wider text-zinc-500 font-bold mt-0.5">Executivo &amp; Burgers</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Coluna Direita: Imagem Principal de Burger na Tábua com Logo Oficial Injetada via CSS (AGENTS.md 3.8) -->
+          <div class="lg:col-span-6 relative reveal-on-scroll">
+            <div class="relative bg-white p-3 sm:p-4 rounded-3xl border border-black/5 shadow-2xl">
+              
+              <div class="relative aspect-[4/3] sm:aspect-[1/1] lg:aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900">
+                <img src="img/hero-burger.jpg" alt="Hambúrguer artesanal Soul Brothers grelhado na brasa com queijo derretido e bacon" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+
+                <!-- Selo da Logo Oficial Sobreposta via HTML/CSS (Diretriz AGENTS.md 3.8) -->
+                <div class="absolute top-4 right-4 bg-black p-2 rounded-full border-2 border-white/20 shadow-2xl flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20">
+                  <img src="logo.png" alt="Emblema Soul Brothers Hamburgueria Artesanal" class="w-full h-full object-contain rounded-full">
+                </div>
+
+                <!-- Badge de Carne Grelhada na Brasa -->
+                <div class="absolute bottom-4 left-4 right-4 p-4 bg-black/80 backdrop-blur-md rounded-xl border border-white/10 text-white flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] uppercase tracking-[0.25em] text-[#FF7A00] font-bold block">Blend Exclusivo 140g &amp; 180g</span>
+                    <span class="font-display text-lg font-bold">O Clássico Burger da Ilha</span>
+                  </div>
+                  <span class="text-xs bg-[#FF7A00] text-black font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Top 1</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Faixa de Destaques Rápidos (Ingredientes & Pratos) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12 pt-8 border-t border-black/5 reveal-on-scroll">
+          
+          <div class="bg-white p-5 rounded-2xl border border-black/5 flex items-center gap-4 shadow-sm hover:border-[#FF7A00]/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00] flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-lg font-bold text-[#111111]">Fogo de Verdade</div>
+              <div class="text-xs text-zinc-500 font-medium">Sem chapa elétrica, brasa pura.</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-black/5 flex items-center gap-4 shadow-sm hover:border-[#FF7A00]/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00] flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-lg font-bold text-[#111111]">Carne 100% Bovina</div>
+              <div class="text-xs text-zinc-500 font-medium">Cortes nobres sem conservantes.</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-black/5 flex items-center gap-4 shadow-sm hover:border-[#FF7A00]/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00] flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-lg font-bold text-[#111111]">Almoço das 11:30h</div>
+              <div class="text-xs text-zinc-500 font-medium">Pratos executivos no Santa Mônica.</div>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-black/5 flex items-center gap-4 shadow-sm hover:border-[#FF7A00]/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-[#FF7A00]/10 flex items-center justify-center text-[#FF7A00] flex-shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-lg font-bold text-[#111111]">Delivery Rápido</div>
+              <div class="text-xs text-zinc-500 font-medium">Chega quentinho e crocante.</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CARDÁPIO DE DESTAQUES (Grid de 4 Cards Conforme Moodboard) -->
+    <section id="cardapio" class="py-20 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Cabeçalho da Seção -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-black/10 reveal-on-scroll">
+          <div>
+            <span class="text-xs uppercase tracking-[0.3em] text-[#FF7A00] font-bold block mb-2">OS MAIS PEDIDOS DA BRASA</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold text-[#111111] tracking-tight">CRAFT BURGERS &amp; COMBOS</h2>
+          </div>
+          <div class="mt-4 md:mt-0">
+            <p class="text-sm text-zinc-600 max-w-md font-medium">
+              Cada burger é assado individualmente no fogo da brasa, servido no pão tostado na manteiga com nossa maionese especial artesanal.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 Cards Fast-Casual Estilo BurgVoid Moodboard -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          
+          <!-- Card 1: O Clássico -->
+          <div class="burger-card p-5 flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden mb-5 bg-zinc-100">
+                <img src="img/burger-classico.jpg" alt="O Clássico Burger da Soul Brothers na brasa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-[#111111] text-white px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-md">
+                  Mais Pedido
+                </div>
+              </div>
+
+              <span class="text-[11px] uppercase tracking-wider text-[#FF7A00] font-bold block mb-1">Burger 140g na Brasa</span>
+              <h3 class="font-display text-2xl font-bold text-[#111111] mb-2">O Clássico</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed mb-6">
+                Burger bovino 140g assado na brasa, queijo mussarela derretido, maionese artesanal da casa, alface americana fresca, tomate e cebola no pão brioche.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-black/5 flex items-center justify-between">
+              <span class="text-xs font-bold text-zinc-400 uppercase">Brasa Pura</span>
+              <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20pedir%20o%20burger%20O%20Cl%C3%A1ssico%20da%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-flame px-4 py-2 text-xs uppercase font-bold">
+                Pedir Burger
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: O Clássico Duplo -->
+          <div class="burger-card p-5 flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden mb-5 bg-zinc-100">
+                <img src="img/burger-duplo.jpg" alt="O Clássico Duplo Soul Brothers com 280g de carne na brasa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-[#FF7A00] text-black px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-md">
+                  Double Meat
+                </div>
+              </div>
+
+              <span class="text-[11px] uppercase tracking-wider text-[#FF7A00] font-bold block mb-1">280g de Carne na Brasa</span>
+              <h3 class="font-display text-2xl font-bold text-[#111111] mb-2">O Clássico Duplo</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed mb-6">
+                Dois burgers artesanais 140g assados na brasa (total 280g), camada dupla de queijo mussarela derretido, maionese especial, salada e cebola no brioche tostado.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-black/5 flex items-center justify-between">
+              <span class="text-xs font-bold text-zinc-400 uppercase">Double Smash</span>
+              <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20pedir%20o%20Cl%C3%A1ssico%20Duplo%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-flame px-4 py-2 text-xs uppercase font-bold">
+                Pedir Burger
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Vina Gretchen (Especial) -->
+          <div class="burger-card p-5 flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden mb-5 bg-zinc-100">
+                <img src="img/burger-especial.jpg" alt="Burger Vina Gretchen especial com provolone e vinagrete" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-[#111111] text-white px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-md">
+                  Receita Autoral
+                </div>
+              </div>
+
+              <span class="text-[11px] uppercase tracking-wider text-[#FF7A00] font-bold block mb-1">Burger Premium 180g</span>
+              <h3 class="font-display text-2xl font-bold text-[#111111] mb-2">Vina Gretchen</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed mb-6">
+                180g de blend exclusivo assado no fogo, queijo provolone tostado na brasa, vinagrete caseiro de tomates frescos, salsa maia aromática e alface americana.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-black/5 flex items-center justify-between">
+              <span class="text-xs font-bold text-zinc-400 uppercase">Exclusivo</span>
+              <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20pedir%20o%20Vina%20Gretchen%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-flame px-4 py-2 text-xs uppercase font-bold">
+                Pedir Burger
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Super Batata com Cheddar & Bacon -->
+          <div class="burger-card p-5 flex flex-col justify-between reveal-on-scroll">
+            <div>
+              <div class="relative aspect-square rounded-xl overflow-hidden mb-5 bg-zinc-100">
+                <img src="img/super-batata.jpg" alt="Super Batata Frita com cheddar cremoso e bacon crocante" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-[#FF7A00] text-black px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-md">
+                  Porção Generosa
+                </div>
+              </div>
+
+              <span class="text-[11px] uppercase tracking-wider text-[#FF7A00] font-bold block mb-1">Para Compartilhar</span>
+              <h3 class="font-display text-2xl font-bold text-[#111111] mb-2">Super Batata Cheddar</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed mb-6">
+                Batata frita crocante e dourada, coberta com cheddar cremoso legítimo e farofa de cubos de bacon fritos na hora. O acompanhamento perfeito.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-black/5 flex items-center justify-between">
+              <span class="text-xs font-bold text-zinc-400 uppercase">Crocância</span>
+              <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20pedir%20a%20Super%20Batata%20com%20Cheddar%20e%20Bacon!" target="_blank" rel="noopener noreferrer" class="btn-flame px-4 py-2 text-xs uppercase font-bold">
+                Pedir Porção
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNER DE COMBOS ESCURO (Exact Moodboard Reference: Dark "OUR BEST COMBOS" Banner) -->
+    <section id="combos" class="py-20 bg-[#111111] text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <span class="text-xs uppercase tracking-[0.3em] text-[#FF7A00] font-bold block mb-3">EXPERIÊNCIA COMPLETA</span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white tracking-tight leading-tight mb-6">
+              NOSSOS MELHORES COMBOS
+            </h2>
+            <p class="text-base text-zinc-300 font-medium leading-relaxed mb-8">
+              Monte seu combo ideal: seu burger artesanal assado na brasa favorito acompanhado de batatas rústicas ou polenta frita crocante com aioli e chopp bem gelado.
+            </p>
+
+            <div class="space-y-4 mb-10">
+              <div class="flex items-center gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#FF7A00] text-black flex items-center justify-center font-bold text-xs">✓</span>
+                <span class="text-sm text-zinc-200">Qualquer Burger Artesanal da Brasa + Fritas Crocantes + Bebida</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#FF7A00] text-black flex items-center justify-center font-bold text-xs">✓</span>
+                <span class="text-sm text-zinc-200">Opção de Chopp Artesanal ou Refrigerante Gelado</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-6 h-6 rounded-full bg-[#FF7A00] text-black flex items-center justify-center font-bold text-xs">✓</span>
+                <span class="text-sm text-zinc-200">Molhos artesanais especiais da casa inclusos</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20os%20combos%20do%20dia%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-flame px-8 py-4 text-sm uppercase tracking-widest inline-block font-bold">
+              Pedir Combo no WhatsApp
+            </a>
+          </div>
+
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <div class="relative bg-zinc-900 rounded-3xl p-3 sm:p-4 border border-white/10 shadow-2xl">
+              <div class="relative aspect-[16/11] rounded-2xl overflow-hidden bg-black">
+                <img src="img/combos-banner.jpg" alt="Combos de hambúrgueres artesanais Soul Brothers com batatas fritas e chopp gelado" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md p-4 rounded-xl border border-white/15 flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] uppercase tracking-widest text-[#FF7A00] font-bold block">Happy Hour &amp; Noite</span>
+                    <span class="font-display text-lg font-bold text-white">Chama os brothers para a mesa!</span>
+                  </div>
+                  <span class="text-xs font-bold text-zinc-300">Floripa / SC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ALMOÇO EXECUTIVO (Das 11:30h às 16h no Santa Mônica) -->
+    <section id="almoco" class="py-20 bg-[#FFF8F0] border-b border-black/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 order-2 lg:order-1 reveal-on-scroll">
+            <div class="relative bg-white rounded-3xl p-3 sm:p-4 border border-black/5 shadow-xl">
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-900">
+                <img src="img/almoco-executivo.jpg" alt="Prato do almoço executivo servido na Soul Brothers em Florianópolis" class="w-full h-full object-cover">
+                <div class="absolute top-3 left-3 bg-[#FF7A00] text-black px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider">
+                  Segunda a Sexta • 11:30h às 16h
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2 reveal-on-scroll">
+            <span class="text-xs uppercase tracking-[0.3em] text-[#FF7A00] font-bold block mb-3">COMIDA DE VERDADE NO DIA A DIA</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold text-[#111111] tracking-tight leading-tight mb-6">
+              ALMOÇO EXECUTIVO NO SANTA MÔNICA
+            </h2>
+            <p class="text-base text-zinc-700 font-medium leading-relaxed mb-6">
+              Seu almoço durante a semana com sabor caseiro autêntico e carnes grelhadas na brasa. Opções balanceadas, fartas e preparadas com ingredientes frescos para recarregar as energias.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div class="bg-white p-4 rounded-xl border border-black/5">
+                <div class="font-display text-lg font-bold text-[#111111]">Contra Filé na Brasa</div>
+                <div class="text-xs text-zinc-600 mt-1">Acompanha arroz, feijão caseiro, fritas crocantes e salada fresca.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-black/5">
+                <div class="font-display text-lg font-bold text-[#111111]">Filé de Frango Grelhado</div>
+                <div class="text-xs text-zinc-600 mt-1">Grelhado no ponto suculento, perfeito para uma refeição leve.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-black/5">
+                <div class="font-display text-lg font-bold text-[#111111]">Milanesa Crocante</div>
+                <div class="text-xs text-zinc-600 mt-1">Empanado sequinho e crocante com acompanhamentos tradicionais.</div>
+              </div>
+              <div class="bg-white p-4 rounded-xl border border-black/5">
+                <div class="font-display text-lg font-bold text-[#111111]">Parmegiana Especial</div>
+                <div class="text-xs text-zinc-600 mt-1">Molho de tomate artesanal da casa e queijo gratinado derretido.</div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20o%20card%C3%A1pio%20do%20almo%C3%A7o%20executivo%20de%20hoje!" target="_blank" rel="noopener noreferrer" class="btn-dark px-8 py-4 text-xs uppercase tracking-widest inline-block font-bold">
+              Consultar Cardápio de Hoje
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- A TRADIÇÃO DA BRASA / HISTÓRIA (Desde 2013 na Ilha da Magia) -->
+    <section id="historia" class="py-20 bg-white border-b border-black/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <span class="text-xs uppercase tracking-[0.3em] text-[#FF7A00] font-bold block mb-3">HISTÓRIA &amp; PROPÓSITO</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold text-[#111111] tracking-tight leading-tight mb-6">
+              O PRIMEIRO BURGER ARTESANAL DE FLORIANÓPOLIS
+            </h2>
+            <p class="text-base text-zinc-700 font-medium leading-relaxed mb-6">
+              Em 2013, quando o termo "hambúrguer artesanal" ainda engatinhava no Brasil, a <strong>Soul Brothers</strong> acendeu a primeira brasa na Ilha da Magia com um objetivo claro: fazer burgers de verdade, no fogo a carvão, com alma e respeito ao cliente.
+            </p>
+            <p class="text-sm text-zinc-600 font-medium leading-relaxed mb-8">
+              Mais de uma década depois, continuamos firmes na Av. Madre Benvenuta, no Santa Mônica. O clima descontraído, o aroma inconfundível de carne na brasa e o chopp sempre trincando transformaram a casa em ponto de encontro oficial de quem ama hambúrguer na Ilha.
+            </p>
+
+            <div class="flex items-center gap-6">
+              <div>
+                <span class="font-display text-3xl font-bold text-[#FF7A00]">2013</span>
+                <span class="block text-xs uppercase tracking-wider text-zinc-500 font-bold">Ano de Fundação</span>
+              </div>
+              <div class="w-px h-10 bg-black/10"></div>
+              <div>
+                <span class="font-display text-3xl font-bold text-[#FF7A00]">500k+</span>
+                <span class="block text-xs uppercase tracking-wider text-zinc-500 font-bold">Burgers Assados</span>
+              </div>
+              <div class="w-px h-10 bg-black/10"></div>
+              <div>
+                <span class="font-display text-3xl font-bold text-[#FF7A00]">100%</span>
+                <span class="block text-xs uppercase tracking-wider text-zinc-500 font-bold">Fogo &amp; Carvão</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <div class="relative bg-zinc-900 rounded-3xl p-3 sm:p-4 border border-black/5 shadow-2xl">
+              <div class="relative aspect-[4/3] rounded-2xl overflow-hidden bg-black">
+                <img src="img/espaco-vibe.jpg" alt="Ambiente descontraído e acolhedor da Soul Brothers no Santa Mônica em Floripa" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 bg-black/80 px-3.5 py-2 rounded-lg border border-white/20 text-xs font-bold text-white uppercase tracking-wider">
+                  Vibe Santa Mônica • Florianópolis
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO & GOOGLE MAPS INTERATIVO COM PINO ATIVO (AGENTS.md 2.3) -->
+    <section id="localizacao" class="py-20 bg-[#FFF8F0] border-b border-black/5 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-12 pb-6 border-b border-black/10 reveal-on-scroll">
+          <div>
+            <span class="text-xs uppercase tracking-[0.3em] text-[#FF7A00] font-bold block mb-2">ONDE ESTAMOS</span>
+            <h2 class="text-4xl sm:text-5xl font-display font-bold text-[#111111] tracking-tight">
+              SANTA MÔNICA • FLORIANÓPOLIS
+            </h2>
+          </div>
+          <div class="mt-4 lg:mt-0 text-zinc-600 text-sm font-medium">
+            <span>📍 Av. Madre Benvenuta, 1477 — Santa Mônica</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Card de Informações e Horários -->
+          <div class="lg:col-span-5 bg-white border border-black/10 rounded-2xl p-7 flex flex-col justify-between shadow-sm reveal-on-scroll">
+            <div>
+              <div class="flex items-center gap-3.5 mb-6 pb-6 border-b border-black/10">
+                <div class="w-12 h-12 rounded-full overflow-hidden bg-black p-0.5 border border-black/20 flex-shrink-0">
+                  <img src="logo.png" alt="Soul Brothers Hamburgueria" class="w-full h-full object-contain rounded-full">
+                </div>
+                <div>
+                  <h3 class="font-display text-xl font-bold text-[#111111]">Soul Brothers Hamburgueria</h3>
+                  <p class="text-xs text-zinc-500 font-medium">Santa Mônica • Florianópolis / SC</p>
+                </div>
+              </div>
+
+              <!-- Endereço Físico -->
+              <div class="mb-6">
+                <div class="text-[11px] uppercase tracking-widest text-[#FF7A00] font-bold mb-1">Endereço</div>
+                <p class="text-sm text-zinc-800 font-bold leading-relaxed">
+                  Av. Madre Benvenuta, 1477 — Santa Mônica
+                </p>
+                <p class="text-xs text-zinc-500 mt-0.5">
+                  Florianópolis - SC, CEP 88035-001 (Fácil estacionamento e acesso).
+                </p>
+              </div>
+
+              <!-- Horários de Atendimento -->
+              <div class="mb-6">
+                <div class="text-[11px] uppercase tracking-widest text-[#FF7A00] font-bold mb-2">Horários de Atendimento</div>
+                <div class="space-y-2 text-xs text-zinc-700 font-medium">
+                  <div class="flex justify-between py-1.5 border-b border-black/5">
+                    <span>Segunda a Sexta (Almoço)</span>
+                    <span class="font-bold text-[#111111]">11:30 — 16:00</span>
+                  </div>
+                  <div class="flex justify-between py-1.5 border-b border-black/5">
+                    <span>Segunda a Sexta (Noite)</span>
+                    <span class="font-bold text-[#111111]">16:00 — 23:00</span>
+                  </div>
+                  <div class="flex justify-between py-1.5 border-b border-black/5">
+                    <span>Sábado (Noite)</span>
+                    <span class="font-bold text-[#111111]">17:30 — 23:00</span>
+                  </div>
+                  <div class="flex justify-between py-1.5">
+                    <span class="text-zinc-400">Domingo</span>
+                    <span class="font-bold text-zinc-400">Consulte no WhatsApp</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contatos Rápidos -->
+              <div>
+                <div class="text-[11px] uppercase tracking-widest text-[#FF7A00] font-bold mb-1">Contato &amp; Pedidos</div>
+                <p class="text-sm font-bold text-[#111111]">(48) 99120-8940</p>
+                <p class="text-xs text-zinc-500 mt-0.5">Instagram: @soulbrothersfloripa</p>
+              </div>
+            </div>
+
+            <!-- Botões de Ação do Mapa -->
+            <div class="pt-6 mt-6 border-t border-black/10 flex flex-col sm:flex-row gap-3">
+              <a href="https://maps.google.com/maps?q=Soul%20Brothers%20Hamburgueria%2C%20Av.%20Madre%20Benvenuta%2C%201477%2C%20Florian%C3%B3polis%20-%20SC" target="_blank" rel="noopener noreferrer" class="btn-dark py-3 px-5 text-center text-xs uppercase tracking-wider font-bold flex items-center justify-center gap-2">
+                <span>Abrir no Google Maps</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+              <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20endere%C3%A7o%20ou%20pedidos%20da%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-outline-dark py-3 px-5 text-center text-xs uppercase tracking-wider font-bold">
+                Falar no WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Google Maps Interativo Obrigatório com Marcador Ativo (iframe incorporado) -->
+          <div class="lg:col-span-7 bg-zinc-200 border border-black/10 rounded-2xl overflow-hidden relative min-h-[380px] lg:min-h-[420px] shadow-sm reveal-on-scroll">
+            <iframe 
+              src="https://maps.google.com/maps?q=Soul%20Brothers%20Hamburgueria%2C%20Av.%20Madre%20Benvenuta%2C%201477%2C%20Florian%C3%B3polis%20-%20SC&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full min-h-[380px] lg:min-h-[420px] border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              title="Mapa de Localização da Soul Brothers Hamburgueria no Santa Mônica em Florianópolis">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ (Perguntas Frequentes) -->
+    <section id="faq" class="py-20 bg-white relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14 reveal-on-scroll">
+          <span class="text-xs uppercase tracking-[0.3em] text-[#FF7A00] font-bold block mb-2">TIRE SUAS DÚVIDAS</span>
+          <h2 class="text-4xl sm:text-5xl font-display font-bold text-[#111111] tracking-tight mb-3">
+            PERGUNTAS FREQUENTES
+          </h2>
+          <p class="text-sm text-zinc-600 font-medium">
+            Tudo o que você precisa saber sobre nossos burgers na brasa, almoço e delivery.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Pergunta 1 -->
+          <div class="border border-black/10 rounded-xl bg-[#FFF8F0]/60 reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-display text-xl font-bold text-[#111111]">Por que os hambúrgueres são assados na brasa?</span>
+              <svg class="faq-chevron w-5 h-5 text-zinc-600 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-600 leading-relaxed border-t border-black/5 pt-4">
+              A brasa a carvão proporciona uma selagem única de alta temperatura por fora enquanto mantém a carne extremamente suculenta por dentro. Além disso, a gordura da carne pinga nas brasas incandescentes e sobe em forma de vapor aromático, conferindo o verdadeiro sabor defumado artesanal que nenhuma chapa elétrica ou gás consegue reproduzir.
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="border border-black/10 rounded-xl bg-[#FFF8F0]/60 reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-display text-xl font-bold text-[#111111]">Como funciona o almoço executivo durante a semana?</span>
+              <svg class="faq-chevron w-5 h-5 text-zinc-600 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-600 leading-relaxed border-t border-black/5 pt-4">
+              Nosso almoço executivo funciona de segunda a sexta-feira, das 11:30h às 16:00h, na Av. Madre Benvenuta, 1477. Servimos opções com carnes grelhadas na brasa (contra filé, frango, milanesa ou parmegiana) acompanhadas de arroz fresquinho, feijão caseiro, batatas fritas e salada.
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="border border-black/10 rounded-xl bg-[#FFF8F0]/60 reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-display text-xl font-bold text-[#111111]">Vocês fazem entregas por delivery na região?</span>
+              <svg class="faq-chevron w-5 h-5 text-zinc-600 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-600 leading-relaxed border-t border-black/5 pt-4">
+              Sim! Atendemos pelo WhatsApp oficial e pelas principais plataformas de delivery em Florianópolis, entregando nos bairros Santa Mônica, Trindade, Itacorubi, Córrego Grande, Pantanal, Parque São Jorge e proximidades. As embalagens são térmicas e ventiladas para que o burger e as batatas cheguem crocantes.
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="border border-black/10 rounded-xl bg-[#FFF8F0]/60 reveal-on-scroll">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none">
+              <span class="font-display text-xl font-bold text-[#111111]">Tem opções de chopp artesanal e cervejas especiais?</span>
+              <svg class="faq-chevron w-5 h-5 text-zinc-600 transform transition-transform duration-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-zinc-600 leading-relaxed border-t border-black/5 pt-4">
+              Com certeza! Servimos chopp artesanal geladíssimo nas torneiras, além de long necks, cervejas comerciais tradicionais, refrigerantes, sucos naturais e água com e sem gás.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BANNER DE CHAMADA FINAL (Fast-Casual App / Delivery Call) -->
+    <section class="py-16 bg-[#FF7A00] text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll">
+        <span class="text-xs uppercase tracking-[0.3em] text-black font-extrabold block mb-2">BATEU A FOME?</span>
+        <h2 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight mb-4">
+          EXPERIMENTE O VERDADEIRO BURGER NA BRASA
+        </h2>
+        <p class="text-base sm:text-lg text-black/80 font-bold max-w-2xl mx-auto mb-8">
+          Peça direto pelo WhatsApp ou venha curtir uma mesa no Santa Mônica. Sabor defumado autêntico desde 2013.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-dark px-8 py-4 text-sm uppercase tracking-widest font-bold w-full sm:w-auto">
+            Pedir no WhatsApp Agora
+          </a>
+          <a href="https://maps.google.com/maps?q=Soul%20Brothers%20Hamburgueria%2C%20Av.%20Madre%20Benvenuta%2C%201477%2C%20Florian%C3%B3polis%20-%20SC" target="_blank" rel="noopener noreferrer" class="bg-white text-black font-bold px-8 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-zinc-100 transition-colors w-full sm:w-auto">
+            Ver Trajeto no Maps
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER MINIMALISTA FAST-CASUAL -->
+  <footer class="bg-[#111111] text-white pt-16 pb-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+        
+        <div class="md:col-span-5 flex flex-col">
+          <div class="flex items-center gap-3.5 mb-4">
+            <div class="w-12 h-12 rounded-full overflow-hidden bg-black p-0.5 border border-white/20">
+              <img src="logo.png" alt="Soul Brothers Emblem" class="w-full h-full object-contain rounded-full">
+            </div>
+            <div>
+              <span class="font-display text-2xl font-bold text-white tracking-wider leading-none">SOUL BROTHERS</span>
+              <span class="text-[10px] tracking-[0.2em] text-[#FF7A00] font-bold block mt-0.5">HAMBURGUERIA ARTESANAL</span>
+            </div>
+          </div>
+          <p class="text-xs text-zinc-400 leading-relaxed max-w-sm">
+            O primeiro burger artesanal de Florianópolis. Assado na brasa desde 2013 no Santa Mônica. Tradição, sabor e o melhor burger da Ilha.
+          </p>
+        </div>
+
+        <div class="md:col-span-3">
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-bold block mb-4">Navegação</span>
+          <ul class="space-y-2 text-xs text-zinc-300 font-medium">
+            <li><a href="#inicio" class="hover:text-[#FF7A00] transition-colors">Início</a></li>
+            <li><a href="#cardapio" class="hover:text-[#FF7A00] transition-colors">Cardápio &amp; Burgers</a></li>
+            <li><a href="#combos" class="hover:text-[#FF7A00] transition-colors">Combos</a></li>
+            <li><a href="#almoco" class="hover:text-[#FF7A00] transition-colors">Almoço Executivo</a></li>
+            <li><a href="#historia" class="hover:text-[#FF7A00] transition-colors">História da Brasa</a></li>
+            <li><a href="#localizacao" class="hover:text-[#FF7A00] transition-colors">Localização &amp; Horários</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <span class="text-xs uppercase tracking-widest text-zinc-400 font-bold block mb-4">Contato &amp; Social</span>
+          <div class="space-y-2.5 text-xs text-zinc-300">
+            <p class="flex items-center gap-2">
+              <span class="text-[#FF7A00]">📍</span> Av. Madre Benvenuta, 1477 — Santa Mônica, Floripa
+            </p>
+            <p class="flex items-center gap-2 font-mono">
+              <span class="text-[#FF7A00]">📞</span> (48) 99120-8940
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="text-[#FF7A00]">📸</span> 
+              <a href="https://www.instagram.com/soulbrothersfloripa/" target="_blank" rel="noopener noreferrer" class="hover:text-[#FF7A00] transition-colors font-bold">
+                @soulbrothersfloripa
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <p>© 2013-2026 Soul Brothers Hamburgueria. Todos os direitos reservados.</p>
+        <p class="text-zinc-500">Florianópolis — Santa Catarina — Brasil</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript (Strict AGENTS.md 1.2 Zero Inline Scripts) -->
+  <script src="js/app.js"></script>
+</body>
+</html>
