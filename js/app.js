@@ -62,6 +62,86 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Interactive Quick-Order & Delivery Estimator for Soul Brothers (Zero Inline Scripts)
+  var burgerSelect = document.getElementById("order-burger-select");
+  var sideSelect = document.getElementById("order-side-select");
+  var qtyInput = document.getElementById("order-qty-input");
+  var distanceSelect = document.getElementById("order-distance-select");
+  var priceDisplay = document.getElementById("order-total-price");
+  var timeDisplay = document.getElementById("order-est-time");
+  var whatsappBtn = document.getElementById("order-whatsapp-cta");
+
+  function updateOrderEstimator() {
+    if (!burgerSelect || !priceDisplay) return;
+
+    var burgerPrices = {
+      "classico": 36.00,
+      "duplo": 48.00,
+      "vina": 46.00,
+      "smash-duplo": 42.00
+    };
+
+    var burgerNames = {
+      "classico": "O Clássico (140g na brasa)",
+      "duplo": "O Clássico Duplo (280g na brasa)",
+      "vina": "Vina Gretchen Especial (180g na brasa)",
+      "smash-duplo": "Double Smash na Brasa (2x 90g)"
+    };
+
+    var sidePrices = {
+      "nenhum": 0.00,
+      "fritas": 16.00,
+      "cheddar-bacon": 28.00,
+      "polenta": 22.00
+    };
+
+    var sideNames = {
+      "nenhum": "Sem acompanhamento",
+      "fritas": "Batata Frita Rústica Crocante",
+      "cheddar-bacon": "Super Batata com Cheddar & Bacon",
+      "polenta": "Polenta Frita Crocante com Aioli"
+    };
+
+    var bKey = burgerSelect.value || "classico";
+    var sKey = (sideSelect && sideSelect.value) || "nenhum";
+    var qty = (qtyInput && parseInt(qtyInput.value, 10)) || 1;
+    if (qty < 1) qty = 1;
+    if (qty > 20) qty = 20;
+
+    var basePrice = ((burgerPrices[bKey] || 36.00) * qty) + (sidePrices[sKey] || 0.00);
+    priceDisplay.textContent = "R$ " + basePrice.toFixed(2).replace(".", ",");
+
+    var distance = (distanceSelect && distanceSelect.value) || "local";
+    var baseMinutes = 20;
+    if (distance === "trindade") baseMinutes = 25;
+    if (distance === "itacorubi") baseMinutes = 30;
+    if (distance === "corrego") baseMinutes = 28;
+    if (distance === "outro") baseMinutes = 35;
+
+    if (timeDisplay) {
+      timeDisplay.textContent = baseMinutes + " - " + (baseMinutes + 10) + " MIN";
+    }
+
+    if (whatsappBtn) {
+      var msg = "Olá, Soul Brothers! Gostaria de fazer o pedido: " +
+        qty + "x " + (burgerNames[bKey] || bKey) +
+        (sKey !== "nenhum" ? " + " + (sideNames[sKey] || sKey) : "") +
+        ". Valor estimado: R$ " + basePrice.toFixed(2).replace(".", ",") +
+        " (Entrega: " + (distanceSelect ? distanceSelect.options[distanceSelect.selectedIndex].text : "Santa Mônica") + ").";
+      whatsappBtn.href = "https://wa.me/5548991208940?text=" + encodeURIComponent(msg);
+    }
+  }
+
+  if (burgerSelect) {
+    burgerSelect.addEventListener("change", updateOrderEstimator);
+    if (sideSelect) sideSelect.addEventListener("change", updateOrderEstimator);
+    if (qtyInput) qtyInput.addEventListener("input", updateOrderEstimator);
+    if (distanceSelect) distanceSelect.addEventListener("change", updateOrderEstimator);
+    updateOrderEstimator();
+  }
+
+
+
   // High-Performance Scroll Reveal Animations via IntersectionObserver
   // Strict rule: Zero window.onscroll listeners, single execution, unobserve on reveal
   var revealElements = document.querySelectorAll(".reveal-on-scroll");
