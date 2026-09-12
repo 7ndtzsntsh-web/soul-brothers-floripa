@@ -96,4 +96,26 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.add("opacity-100", "translate-y-0");
     });
   }
+
+  // Vercel Speed Insights Integration (Core Web Vitals)
+  // Initializes Vercel Speed Insights queue and injects official script safely
+  (function initSpeedInsights() {
+    if (!window.si) {
+      window.si = function () {
+        window.siq = window.siq || [];
+        window.siq.push(arguments);
+      };
+    }
+    var speedScript = document.createElement("script");
+    speedScript.src = "/_vercel/speed-insights/script.js";
+    speedScript.defer = true;
+    speedScript.dataset.sdkn = "@vercel/speed-insights";
+    speedScript.dataset.sdkv = "2.0.0";
+    speedScript.onerror = function () {
+      // In local dev without Vercel CLI, fall back gracefully
+      console.info("[Vercel Speed Insights] Monitoring ready for Vercel deployment.");
+    };
+    document.head.appendChild(speedScript);
+  })();
 });
+
