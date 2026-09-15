@@ -25,10 +25,10 @@
   <meta name="twitter:description" content="Soul Brothers Hamburgueria em Florianópolis. O primeiro burger artesanal da Ilha, assado na brasa desde 2013 no Santa Mônica. Almoço e noite. Peça já!">
   <meta name="twitter:image" content="https://soulbrothersfloripa.vercel.app/og-image.jpg">
 
-  <!-- Google Fonts: Bebas Neue, Plus Jakarta Sans, Space Grotesk & Space Mono -->
+  <!-- Google Fonts: Playfair Display, Bebas Neue, Plus Jakarta Sans, Space Grotesk & Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 
   <!-- Compiled Tailwind CSS -->
@@ -84,59 +84,6 @@
 </head>
 <body class="bg-[#FFF8F0] text-[#1A1A1A] antialiased selection:bg-[#FF7A00] selection:text-white">
 
-  <!-- Top Announcement Bar (Fast-Casual Moodboard Style) -->
-  <div class="bg-[#111111] text-white text-xs py-2 px-4 tracking-widest text-center uppercase font-bold">
-    <div class="max-w-7xl mx-auto flex items-center justify-center space-x-3 sm:space-x-6 overflow-hidden text-[11px] sm:text-xs">
-      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#FF7A00] animate-pulse"></span> DESDE 2013</span>
-      <span class="text-white/30">•</span>
-      <span class="text-[#FF7A00]">O PRIMEIRO BURGER ARTESANAL DA ILHA</span>
-      <span class="text-white/30 hidden md:inline">•</span>
-      <span class="hidden md:inline">ASSADO 100% NA BRASA 🔥</span>
-      <span class="text-white/30 hidden lg:inline">•</span>
-      <span class="hidden lg:inline text-zinc-400">SANTA MÔNICA • FLORIPA</span>
-    </div>
-  </div>
-
-  <!-- Header / Navigation (Clean Fast-Casual Burger Bar) -->
-  <header class="sticky top-0 z-50 bg-[#FFF8F0]/95 backdrop-blur-md border-b border-black/5 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <!-- Logo Oficial com Badge Redondo -->
-      <a href="#inicio" class="flex items-center gap-3.5 group">
-        <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#111111] bg-black shadow-md group-hover:scale-105 transition-transform duration-300">
-          <img src="logo.png" alt="Logo Oficial Soul Brothers Hamburgueria" class="w-full h-full object-contain p-0.5">
-        </div>
-        <div class="flex flex-col">
-          <span class="font-display text-2xl font-bold text-[#111111] tracking-wide leading-none group-hover:text-[#FF7A00] transition-colors">SOUL BROTHERS</span>
-          <span class="text-[10px] tracking-[0.2em] text-zinc-500 font-bold uppercase mt-0.5">HAMBURGUERIA • FLORIPA</span>
-        </div>
-      </a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center space-x-7 text-xs uppercase tracking-widest font-bold text-zinc-700">
-        <a href="#inicio" class="hover:text-[#FF7A00] transition-colors py-1">Início</a>
-        <a href="#cardapio" class="hover:text-[#FF7A00] transition-colors py-1">Cardápio</a>
-        <a href="#combos" class="hover:text-[#FF7A00] transition-colors py-1">Combos</a>
-        <a href="#almoco" class="hover:text-[#FF7A00] transition-colors py-1">Almoço Executivo</a>
-        <a href="#historia" class="hover:text-[#FF7A00] transition-colors py-1">A Brasa</a>
-        <a href="#localizacao" class="hover:text-[#FF7A00] transition-colors py-1">Localização</a>
-        <a href="#protocol" class="hover:text-[#0055FF] transition-colors py-1 font-mono text-[11px] text-[#0055FF]">[R&amp;D LAB]</a>
-      </nav>
-
-      <!-- Header CTAs -->
-      <div class="hidden sm:flex items-center gap-3">
-        <a href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20pedido%20na%20Soul%20Brothers!" target="_blank" rel="noopener noreferrer" class="btn-flame px-5 py-2.5 text-xs uppercase tracking-wider font-bold flex items-center gap-2">
-          <span>Pedir no WhatsApp</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
-      </div>
-
-      <!-- Mobile Menu Toggle Button -->
-      <button id="mobile-menu-btn" type="button" aria-label="Abrir Menu de Navegação" class="md:hidden p-2 text-zinc-800 hover:text-[#FF7A00] focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </header>
-
   <!-- Mobile Drawer Menu -->
   <div id="mobile-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
   <div id="mobile-drawer" class="fixed inset-y-0 right-0 max-w-xs w-full bg-[#111111] text-white border-l border-white/10 z-50 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
@@ -176,96 +123,99 @@
   </div>
 
   <main>
-    <!-- HERO SECTION (Brutalist Street Burger & Bleed Total - Soul Brothers) -->
-    <section id="inicio" class="relative min-h-screen bg-[#080808] text-neutral-100 overflow-hidden flex flex-col justify-between selection:bg-amber-500 selection:text-black">
-      
-      <!-- Imagem Gigante de Fundo (Bleed Total com Vinheta Escura) -->
-      <div class="absolute inset-0 z-0 pointer-events-none">
+    <!-- HERO SECTION: High-End Editorial Glassmorphism -->
+    <section id="inicio" class="relative min-h-screen w-full overflow-hidden bg-neutral-950 font-sans text-white flex flex-col justify-between p-6 md:p-12">
+      <!-- 1. Background Cinematográfico Full-Bleed com Zoom Lento -->
+      <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img 
-          src="img/hero-burger.jpg" 
-          alt="Hambúrguer artesanal Soul Brothers grelhado na brasa no Santa Mônica em Florianópolis" 
-          class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-125 scale-105"
-        >
-        <!-- Gradiente para fundir nas bordas e dar legibilidade -->
-        <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-[#080808]/80"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#080808]/90 via-transparent to-[#080808]/90"></div>
+          src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1920&q=85" 
+          alt="Soul Brothers Artesanal Smash Burger na Brasa" 
+          class="h-full w-full object-cover object-center filter brightness-[0.42] contrast-110 transition-transform duration-1000 ease-out hover:scale-105"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/60"></div>
       </div>
 
-      <!-- Barra de Status Técnica / Topo Minimalista -->
-      <div class="relative z-10 border-b border-white/10 backdrop-blur-md px-6 md:px-12 py-4 flex justify-between items-center font-mono text-[11px] tracking-widest text-neutral-400">
+      <!-- Header Superior em Vidro Suave -->
+      <header class="relative z-10 flex items-center justify-between border-b border-white/10 pb-6 backdrop-blur-xs">
         <div class="flex items-center gap-3">
-          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span class="text-white uppercase font-bold">BRASA ACESA // ABERTO</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <div class="w-6 h-6 rounded-full overflow-hidden bg-black border border-white/20 hidden sm:block">
-            <img src="logo.png" alt="Emblema Oficial Soul Brothers" class="w-full h-full object-contain">
+          <div class="w-8 h-8 rounded-full overflow-hidden border border-white/20 bg-black flex items-center justify-center">
+            <img src="logo.png" alt="Soul Brothers Emblem" class="w-full h-full object-contain p-0.5">
           </div>
-          <span class="hidden md:inline text-neutral-400 uppercase font-bold">SOUL BROTHERS — ARTISAN STREET BURGER • DESDE 2013</span>
+          <span class="text-xs uppercase tracking-[0.25em] text-neutral-200 font-medium">SOUL BROTHERS</span>
+          <span class="text-neutral-500">/</span>
+          <span class="text-[11px] uppercase tracking-widest text-amber-400 font-mono">ARTISANAL SMASH</span>
         </div>
-        <a href="#cardapio" class="border border-white/20 px-4 py-1.5 uppercase hover:bg-white hover:text-black transition-all duration-300 font-bold text-white">
-          [ FAZER PEDIDO ]
-        </a>
-      </div>
+        <nav class="hidden md:flex items-center gap-8 text-xs tracking-wider uppercase text-neutral-300 font-light">
+          <a href="#cardapio" class="hover:text-white transition-colors duration-300">Cardápio</a>
+          <a href="#combos" class="hover:text-white transition-colors duration-300">Combos</a>
+          <a href="#almoco" class="hover:text-white transition-colors duration-300">Almoço</a>
+          <a href="#historia" class="hover:text-white transition-colors duration-300">Origem</a>
+          <a href="#localizacao" class="hover:text-white transition-colors duration-300">Endereço</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a 
+            href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido%20direto%20na%20Soul%20Brothers!" 
+            class="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-xs font-medium uppercase tracking-wider backdrop-blur-md hover:bg-white hover:text-black transition-all duration-300 hover:shadow-lg"
+          >
+            Pedir Direto
+          </a>
+          <button id="mobile-menu-btn" type="button" aria-label="Abrir Menu de Navegação" class="md:hidden p-2 text-white/80 hover:text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </header>
 
-      <!-- Hero Central com Tipografia Gigante Sobreposta -->
-      <div class="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 py-16 flex flex-col justify-center my-auto reveal-on-scroll">
-        <div class="flex items-center gap-4 mb-4 font-mono text-xs uppercase tracking-[0.3em] text-amber-500 font-bold">
-          <span>01 // FOGO, CARVÃO &amp; BRASA</span>
-          <span class="w-12 h-[1px] bg-amber-500/40"></span>
-          <span>SEM FRESCURA</span>
+      <!-- Corpo Central: Dock Lateral + Placa Central em Vidro Fosco Interativo -->
+      <div class="relative z-10 my-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-end pt-12 pb-8">
+        
+        <!-- Dock Vertical de Métricas (Micro-Cards com Animação Hover) -->
+        <div class="md:col-span-3 flex md:flex-col gap-3">
+          <div class="flex-1 md:flex-initial rounded-2xl bg-[#5c1d1d]/85 border border-white/20 p-4 backdrop-blur-md shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:bg-[#6e2323] cursor-default">
+            <span class="block text-2xl font-light tracking-tight">100%</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-200 font-mono">Angus Certificado</span>
+          </div>
+          <div class="flex-1 md:flex-initial rounded-2xl bg-black/40 border border-white/15 p-4 backdrop-blur-md shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 cursor-default">
+            <span class="block text-2xl font-light tracking-tight">18 min</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-300 font-mono">Tempo na Chapa</span>
+          </div>
+          <div class="flex-1 md:flex-initial rounded-2xl bg-black/40 border border-white/15 p-4 backdrop-blur-md shadow-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 cursor-default">
+            <span class="block text-2xl font-light tracking-tight">4.9 ★</span>
+            <span class="text-[10px] uppercase tracking-wider text-neutral-300 font-mono">Review Local</span>
+          </div>
         </div>
 
-        <!-- Título Brutalista Ocupando a Largura (Single H1) -->
-        <h1 class="text-6xl sm:text-8xl md:text-9xl font-black tracking-tighter uppercase leading-[0.88] mb-8 select-none font-display">
-          SMASH &amp; BRASA <br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-neutral-600">BRUTAL.</span>
-        </h1>
-
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
-          <p class="md:col-span-6 font-mono text-xs md:text-sm text-neutral-300 leading-relaxed max-w-lg backdrop-blur-sm bg-black/40 p-4 border-l-2 border-amber-500">
-            O primeiro burger artesanal da Ilha de Florianópolis. Carne 100% bovina fresca grelhada no fogo da brasa a carvão com crosta perfeita, queijo derretido no ponto e brioche tostado. Sem taxas abusivas, direto da brasa para a sua mão.
-          </p>
-
-          <div class="md:col-span-6 flex flex-col sm:flex-row gap-4 md:justify-end">
+        <!-- Placa de Vidro Principal (Frosted Glass) -->
+        <div class="md:col-span-9 rounded-3xl bg-black/40 border border-white/20 p-8 md:p-12 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-white/30">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight text-white leading-[1.1] mb-6">
+            A chapa de ferro fundido para <br />
+            <span class="italic font-light text-neutral-200">elevar seu paladar</span> hoje e sempre.
+          </h1>
+          
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-4 border-t border-white/15">
+            <p class="text-xs sm:text-sm text-neutral-300 max-w-md font-light leading-relaxed">
+              Sem intermediários, sem taxas abusivas e sem espera fria. O smash burger com crosta perfeita e pão tostado na manteiga direto na sua mão.
+            </p>
+            
             <a 
-              href="https://wa.me/5548991208940?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido%20direto%20na%20Soul%20Brothers!" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-3 bg-white text-black font-black uppercase text-xs tracking-wider px-8 py-4 hover:bg-amber-500 transition-colors duration-200 shadow-xl"
+              href="https://wa.me/5548991208940?text=Quero%20fazer%20um%20pedido%20direto" 
+              class="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-amber-600 px-8 py-4 text-xs font-semibold uppercase tracking-wider text-black hover:brightness-110 hover:scale-105 shadow-xl transition-all duration-300"
             >
-              <span>PEDIR NO WHATSAPP</span>
+              <span>Fazer Pedido Direto</span>
               <span>→</span>
             </a>
-            <a 
-              href="#cardapio" 
-              class="inline-flex items-center justify-center gap-3 border border-white/30 text-white font-bold uppercase text-xs tracking-wider px-8 py-4 hover:bg-white/10 transition-colors duration-200"
-            >
-              <span>VER CARDÁPIO</span>
-            </a>
           </div>
         </div>
+
       </div>
 
-      <!-- Rodapé Técnico com Especificações -->
-      <div class="relative z-10 border-t border-white/10 backdrop-blur-md px-6 md:px-12 py-4 grid grid-cols-2 md:grid-cols-4 gap-4 font-mono text-[10px] text-neutral-400 uppercase tracking-widest">
-        <div>
-          <span class="block text-neutral-600">BLEND</span>
-          <span class="text-white font-bold">100% CARNE FRESCA SELECIONADA</span>
-        </div>
-        <div>
-          <span class="block text-neutral-600">PREPARO</span>
-          <span class="text-white font-bold">FOGO &amp; BRASA A CARVÃO</span>
-        </div>
-        <div>
-          <span class="block text-neutral-600">ORIGEM</span>
-          <span class="text-white font-bold">SANTA MÔNICA / FLORIPA</span>
-        </div>
-        <div class="text-right">
-          <span class="block text-neutral-600">STATUS</span>
-          <span class="text-amber-500 font-bold">ENTREGA RÁPIDA</span>
-        </div>
-      </div>
+      <!-- Rodapé Técnico Discreto -->
+      <footer class="relative z-10 flex justify-between items-center text-[10px] uppercase tracking-widest text-neutral-400 font-mono border-t border-white/10 pt-4">
+        <span>Florianópolis / SC</span>
+        <span class="text-amber-400 font-bold flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          Pedidos Abertos
+        </span>
+      </footer>
     </section>
 
     <!-- CARDÁPIO DE DESTAQUES (Grid de 4 Cards Conforme Moodboard) -->
