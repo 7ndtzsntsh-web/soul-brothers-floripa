@@ -126,7 +126,7 @@
     <!-- HERO SECTION: Ultra-Clean Monochromatic High-End Glassmorphism -->
     <section id="inicio" class="relative min-h-screen w-full overflow-hidden bg-neutral-950 font-sans text-white flex flex-col justify-between p-6 md:p-12">
       <!-- Fundo com Iluminação Natural e Nítida -->
-      <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+      <div id="parallax-bg" class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img 
           src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=1920&q=85" 
           alt="Soul Brothers Artisanal Smash Burger" 
@@ -186,8 +186,8 @@
         </div>
 
         <!-- Placa de Vidro Fosco Monocromática -->
-        <div class="md:col-span-9 rounded-3xl bg-black/35 border border-white/20 p-8 md:p-12 backdrop-blur-xl shadow-2xl transition-all duration-500 hover:border-white/35">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight text-white leading-[1.1] mb-6">
+        <div id="parallax-card" style="transform-style: preserve-3d;" class="md:col-span-9 rounded-3xl bg-black/35 border border-white/20 p-8 md:p-12 backdrop-blur-xl shadow-2xl transition-transform duration-200 ease-out hover:border-white/35">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight text-white leading-[1.1] mb-6" style="transform: translateZ(30px);">
             A chapa de ferro fundido para <br />
             <span class="italic font-light text-neutral-200">elevar seu paladar</span> hoje e sempre.
           </h1>
