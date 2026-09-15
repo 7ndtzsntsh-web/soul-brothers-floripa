@@ -117,5 +117,45 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     document.head.appendChild(speedScript);
   })();
+
+  // 3D Parallax Mouse Move Effect for Hero Section
+  var parallaxBg = document.getElementById("parallax-bg");
+  var parallaxCard = document.getElementById("parallax-card");
+  
+  if (parallaxBg && parallaxCard) {
+    var mouseX = 0;
+    var mouseY = 0;
+    var currentX = 0;
+    var currentY = 0;
+
+    function animateParallax() {
+      currentX += (mouseX - currentX) * 0.1;
+      currentY += (mouseY - currentY) * 0.1;
+
+      // Fundo: translação oposta (-10px a +10px) com scale extra
+      var bgX = currentX * -10;
+      var bgY = currentY * -10;
+      parallaxBg.style.transform = "translate3d(" + bgX + "px, " + bgY + "px, 0) scale(1.05)";
+
+      // Placa: inclinação 3D sutil (-3deg a +3deg)
+      var rotateX = currentY * -3;
+      var rotateY = currentX * 3;
+      parallaxCard.style.transform = "rotateX(" + rotateX + "deg) rotateY(" + rotateY + "deg)";
+
+      requestAnimationFrame(animateParallax);
+    }
+
+    animateParallax();
+
+    window.addEventListener("mousemove", function(e) {
+      mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+      mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+    }, { passive: true });
+
+    window.addEventListener("mouseleave", function() {
+      mouseX = 0;
+      mouseY = 0;
+    });
+  }
 });
 
