@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dra. Amanda Lima | Odontologia Avançada</title>
+  <meta name="description" content="Especialista em Odontologia. Atendimento premium e tecnologia para cuidar do seu sorriso e bem-estar.">
+  
+  <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ["'Playfair Display'", "serif"],
+            sans: ["'Inter'", "sans-serif"],
+          },
+          colors: {
+            brand: {
+              // Cor extraída da referência (Teal/Dark Cyan)
+              accent: "#0d9488", 
+              hover: "#0f766e"
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Ocultar barra de rolagem mantendo funcionalidade */
+    ::-webkit-scrollbar { width: 0px; background: transparent; }
+    
+    /* Efeito de entrada suave */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+    
+    /* Efeito Hover do Glass */
+    .glass-card {
+      backdrop-filter: blur(24px);
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glass-card:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-[#050505] text-white font-sans antialiased min-h-screen overflow-x-hidden selection:bg-brand-accent selection:text-white relative">
+
+  <!-- 1. IMAGEM DE FUNDO FULL-BLEED (Vinheta Escura) -->
+  <div class="fixed inset-0 z-0 pointer-events-none">
+    <!-- Imagem Unsplash High-End Odontologia -->
+    <img 
+      src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1920&q=85" 
+      alt="Procedimento de odontologia estética premium" 
+      class="w-full h-full object-cover brightness-[0.30] scale-105"
+    >
+    <!-- Gradiente escuro para garantir leitura impecável -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-[#050505]/80"></div>
+  </div>
+
+  <!-- NAVBAR MINIMALISTA -->
+  <nav class="fixed top-0 w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center animate-fade-up">
+    <!-- Elemento da Marca -->
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center bg-white/5 backdrop-blur-md">
+        <svg class="w-4 h-4 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+      </div>
+      <span class="text-sm font-serif tracking-widest text-white uppercase">Dra. Amanda Lima</span>
+    </div>
+    
+    <!-- Redes / Secundário -->
+    <div class="flex items-center gap-6">
+      <a href="https://www.instagram.com/dentistaamandalima/" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors flex items-center gap-2 text-sm tracking-wide">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Instagram
+      </a>
+    </div>
+  </nav>
+
+  <!-- ESTRUTURA PRINCIPAL (DOCK LATERAL + PLACAS DE VIDRO) -->
+  <main class="relative z-10 w-full min-h-screen flex flex-col items-center p-6 lg:p-12 gap-12 pt-32 pb-24 max-w-[1400px] mx-auto">
+    
+    <!-- HEADER HERO COM CARD SOBREPOSTO -->
+    <div class="flex flex-col lg:flex-row gap-8 w-full">
+      
+      <!-- PLACA PRINCIPAL -->
+      <section class="flex-1 glass-card rounded-[2.5rem] p-8 md:p-14 animate-fade-up shadow-2xl relative overflow-hidden group">
+        <div class="max-w-2xl relative z-10">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 mb-8">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+            <span class="text-xs uppercase tracking-widest text-white/80 font-medium">Odontologia Moderna</span>
+          </div>
+
+          <!-- Tipografia: Híbrida Editorial -->
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-[1.1] mb-8">
+            Odontologia de excelência com <em class="font-light text-white/70">foco no seu bem-estar.</em>
+          </h1>
+          
+          <p class="text-base md:text-lg text-white/60 font-sans font-light max-w-xl leading-relaxed mb-12">
+            Cuidado profissional em um ambiente projetado para sua segurança e conforto. Tecnologias avançadas para um sorriso saudável e natural.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <!-- Conversão: WhatsApp CTA (com Cor Acento) -->
+            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-4 bg-brand-accent text-white px-8 py-4 rounded-full font-sans font-medium text-sm tracking-wide transition-all duration-500 hover:scale-[1.02] hover:bg-brand-hover shadow-[0_0_30px_rgba(13,148,136,0.3)]">
+              Agendar Avaliação
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            <a href="#servicos" class="inline-flex items-center gap-4 bg-white/5 border border-white/20 text-white px-8 py-4 rounded-full font-sans font-medium text-sm tracking-wide transition-all duration-300 hover:bg-white/10">
+              Ver Tratamentos
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCK LATERAL / CARD PROFISSIONAL (Como na referência) -->
+      <aside class="w-full lg:w-[320px] flex flex-col gap-6 animate-fade-up delay-100 shrink-0">
+        <!-- Card da Doutora -->
+        <div class="glass-card rounded-[2.5rem] p-6 transition-transform duration-500 hover:-translate-y-2 flex flex-col items-center text-center">
+          <!-- Fallback técnico de imagem, já que não temos a foto real da cliente -->
+          <div class="w-24 h-24 rounded-full border border-white/20 bg-neutral-800/80 mb-4 overflow-hidden shadow-xl flex items-center justify-center text-[10px] text-white/40 uppercase text-center p-2">
+            [FOTO DA CLIENTE]
+          </div>
+          <h3 class="font-serif text-xl text-white mb-1">Dra. Amanda Lima</h3>
+          <p class="text-xs text-brand-accent font-medium uppercase tracking-widest mb-6">Cirurgiã-Dentista</p>
+          
+          <div class="w-full border-t border-white/10 pt-4 flex justify-between items-center px-4">
+            <div class="flex items-center gap-1">
+              <svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+              <span class="text-sm font-bold text-white">4.9</span>
+            </div>
+            <span class="text-xs text-white/50">Avaliação Média</span>
+          </div>
+        </div>
+
+        <!-- Estatísticas Rápidas -->
+        <div class="glass-card rounded-[2rem] p-6 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-accent">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+          </div>
+          <div>
+            <p class="text-xl font-serif text-white">98%</p>
+            <p class="text-[10px] text-white/50 uppercase tracking-widest">Satisfação</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- SEÇÃO DE SERVIÇOS (Inspirada no mockup) -->
+    <div id="servicos" class="w-full mt-12">
+      <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-8 animate-fade-up delay-200">
+        <div>
+          <h2 class="text-3xl font-serif text-white mb-2">Descubra nossos <em class="font-light text-white/70">Serviços</em></h2>
+          <p class="text-white/50 text-sm font-sans max-w-md">Tratamentos completos para garantir a saúde e a estética do seu sorriso.</p>
+        </div>
+        <div class="flex gap-2">
+          <!-- Nav botões de estética pura -->
+          <button class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/40 hover:bg-white/10 transition text-white/50 hover:text-white">&larr;</button>
+          <button class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-black/40 hover:bg-white/10 transition text-white/50 hover:text-white">&rarr;</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-up delay-300">
+        <!-- Serviço 1 -->
+        <div class="glass-card rounded-[2rem] h-64 relative overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1600170311833-c2cf5280ce49?auto=format&fit=crop&w=600&q=80" alt="Limpeza" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 mix-blend-luminosity">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+            <h3 class="font-serif text-xl text-white">Limpeza<br><em class="font-light text-white/70">Profissional</em></h3>
+            <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 2 -->
+        <div class="glass-card rounded-[2rem] h-64 relative overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1595064085577-7c2ef98ec311?auto=format&fit=crop&w=600&q=80" alt="Avaliação" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 mix-blend-luminosity">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+            <h3 class="font-serif text-xl text-white">Avaliação<br><em class="font-light text-white/70">Completa</em></h3>
+            <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 3 -->
+        <div class="glass-card rounded-[2rem] h-64 relative overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" alt="Clareamento" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 mix-blend-luminosity">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+          <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+            <h3 class="font-serif text-xl text-white">Clareamento<br><em class="font-light text-white/70">Estético</em></h3>
+            <div class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEÇÃO FINAL CTA -->
+    <div class="w-full mt-12 glass-card rounded-[2.5rem] p-10 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-brand-accent/20 rounded-full blur-[80px] pointer-events-none"></div>
+      
+      <div class="relative z-10 max-w-xl">
+        <h2 class="text-3xl font-serif text-white mb-2">Pronto para um <em class="font-light text-brand-accent">sorriso saudável?</em></h2>
+        <p class="text-white/60 text-sm font-sans">Agende sua consulta e conheça nossos tratamentos de excelência.</p>
+      </div>
+      <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center gap-4 bg-brand-accent text-white px-8 py-4 rounded-full font-sans font-medium text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:bg-brand-hover whitespace-nowrap">
+        Agendar Consulta
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="relative z-10 text-center py-6 text-[10px] uppercase tracking-widest text-white/30 border-t border-white/10 w-full backdrop-blur-md bg-black/40">
+    &copy; 2026 Dra. Amanda Lima. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
