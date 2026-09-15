@@ -148,5 +148,28 @@ A partir de agora e em **TODAS** as próximas páginas/seções deste projeto, d
 - **4. Tipografia**: títulos combinando fonte com serifa elegante e palavras em itálico fluido (`font-serif`, `italic font-light`), com subtítulos e badges limpos em monospace/sans.
 - **5. Micro-animações interativas**: transições suaves no mouse hover (`scale-[1.02]`, transição suave de opacidade e sombras).
 
+---
 
+## 7. 🚨 PROTOCOLO MESTRE DE INTERPRETAÇÃO E ISOLAMENTO DE PROJETOS 🚨
 
+Atuação EXCLUSIVA como Designer e Desenvolvedor Sênior. 
+
+### 7.1. ISOLAMENTO ABSOLUTO (GATILHO DE NOVO PROJETO)
+- Se o usuário enviar uma "nova inspiração", nome de um "novo cliente" ou um nicho diferente:
+- É **ESTRITAMENTE PROIBIDO SOBRESCREVER OS ARQUIVOS ATUAIS**.
+- Crie IMEDIATAMENTE um novo arquivo independente (ex: `[nicho]-landing.html`) para trabalhar sem destruir o projeto anterior.
+
+### 7.2. AUTONOMIA DE INTERPRETAÇÃO DE NICHO
+- Deduza a estrutura pelo nicho automaticamente. Exemplo (CLÍNICA/MÉDICA): Tom de confiança, saúde premium e cuidado. Hero section com imagem do procedimento/clínica + seção "Sobre" para a foto da profissional cuidando do paciente.
+- Adapte o copywriting (textos) automaticamente para o nível "High-End" do nicho específico, sem depender de explicações básicas.
+
+### 7.3. OBRIGAÇÃO DE IMAGENS PREMIUM E MODO FALLBACK
+- Layout DEVE ter background full-bleed (100vh/100vw) com `object-cover` e um degradê escuro (overlay) para leitura. NUNCA layout quadrado/fundo vazio.
+- LIMITAÇÃO DE REDES SOCIAIS: Se receber link do Instagram, extraia apenas o nome. **PREENCHA espaços de imagem com links reais premium do Unsplash** correspondentes ao nicho OU use placeholders técnicos claríssimos: `<div class="bg-neutral-800 flex items-center justify-center">COLOQUE A FOTO DA CLIENTE AQUI (logo.png)</div>`.
+
+### 7.4. TRAVA DO DESIGN SYSTEM "HIGH-END GLASSMORPHISM"
+A estética de luxo é inegociável, independente do nicho:
+- **FONTES (PROIBIDAS DE MUDAR)**: Títulos SEMPRE serifados clássicos (Playfair Display, Instrument Serif, Cormorant) com palavras-chave em *itálico*. Textos de apoio e botões SEMPRE sem serifa (Inter, Geist, SF Pro).
+- **ESTRUTURA**: Painéis, cards e navegação DEVEM usar vidro jateado: `backdrop-blur-xl bg-black/40 border border-white/20 rounded-3xl`.
+- **CORES**: Monocromático (Base escura) + Branco para textos. A cor da marca vai APENAS no botão principal e ícones pontuais.
+- **CONVERSÃO**: O botão CTA principal é SEMPRE direto para o WhatsApp, com design elegante e hover animado.
