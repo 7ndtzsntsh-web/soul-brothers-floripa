@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Mariana Pederneiras | Harmonização Orofacial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- IMPORTAÇÃO FORÇADA DAS FONTES ELEGANTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-neutral-950 font-sans text-white antialiased">
+
+  <section class="relative min-h-screen w-full overflow-hidden flex flex-col justify-between p-6 md:p-12">
+    
+    <!-- 1. IMAGEM DE FUNDO (COLOQUE O LINK DA FOTO DA MULHER AQUI) -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <img 
+        src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1920&q=85" 
+        alt="Harmonização Facial - Dra Mariana Pederneiras" 
+        class="h-full w-full object-cover object-center filter brightness-[0.40]"
+      />
+      <!-- Degrade para garantir que a letra branca apareça -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60"></div>
+    </div>
+
+    <!-- 2. HEADER: LOGO E INSTAGRAM -->
+    <header class="relative z-10 flex items-center justify-between border-b border-white/15 pb-6">
+      <div class="flex items-center gap-3">
+        <!-- SE TIVER A LOGO, TROQUE O TEXTO ABAIXO PELA TAG <img src="logo.png"> -->
+        <span class="text-lg font-serif tracking-widest text-white">DRA. MARIANA PEDERNEIRAS</span>
+      </div>
+      <a 
+        href="https://www.instagram.com/dra.marianapederneiras" 
+        target="_blank"
+        class="rounded-full border border-white/30 bg-white/5 px-6 py-2 text-xs font-semibold uppercase tracking-wider backdrop-blur-md hover:bg-white hover:text-black transition-all"
+      >
+        Instagram
+      </a>
+    </header>
+
+    <!-- 3. PAINEL CENTRAL EM VIDRO FOSCO -->
+    <div class="relative z-10 my-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-end pt-12 pb-8">
+      
+      <div class="md:col-span-9 md:col-start-2 rounded-3xl bg-black/40 border border-white/20 p-8 md:p-12 backdrop-blur-xl shadow-2xl">
+        <!-- TÍTULO COM SERIFA (FONTE DE LUXO) -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-normal tracking-tight text-white leading-[1.2] mb-6">
+          A precisão perfeita para <br />
+          <span class="italic font-light text-neutral-300">realçar a sua beleza</span> natural.
+        </h1>
+        
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-6 border-t border-white/15">
+          <p class="text-sm text-neutral-300 max-w-md font-light leading-relaxed">
+            Especialista em Endodontia e Harmonização Orofacial. Protocolos de alto padrão e resultados sofisticados em São José, SC.
+          </p>
+          
+          <!-- BOTÃO DO WHATSAPP (COLOQUE A COR DELA AQUI, ex: bg-rose-500) -->
+          <a 
+            href="https://wa.me/5548999710650" 
+            class="inline-flex items-center gap-3 rounded-full bg-white text-black px-8 py-4 text-sm font-bold uppercase tracking-wider hover:bg-neutral-200 hover:scale-105 transition-all shadow-xl whitespace-nowrap"
+          >
+            <span>Falar no WhatsApp</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
